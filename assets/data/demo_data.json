@@ -1,0 +1,904 @@
+{
+  "_info": "Données de démonstration O'KOURAN (identiques à la version HTML). Journée simulée : vendredi 9 octobre 2026. Les soldes 'startKwh' sont les soldes à minuit.",
+  "simulatedDay": "2026-10-09",
+  "defaultTime": "07:00",
+  "users": [
+    {
+      "id": "u1",
+      "firstName": "Aya",
+      "lastName": "Kouassi",
+      "phone": "0708442190",
+      "password": "aya2026",
+      "email": "aya.kouassi@exemple.ci",
+      "commune": "Cocody",
+      "profile": "Consommation normale"
+    },
+    {
+      "id": "u2",
+      "firstName": "Koffi",
+      "lastName": "Yao",
+      "phone": "0544123378",
+      "password": "koffi2026",
+      "email": "koffi.yao@exemple.ci",
+      "commune": "Yopougon",
+      "profile": "Hausse anormale"
+    }
+  ],
+  "meters": [
+    {
+      "id": "m1",
+      "ownerId": "u1",
+      "name": "Maison Cocody",
+      "number": "0451 8823 7194",
+      "location": "Cocody Angré, Abidjan",
+      "type": "Prépayé monophasé",
+      "kind": "home",
+      "tariffPerKwh": 73,
+      "usualRechargeKwh": 50,
+      "startKwh": 27,
+      "remoteRecharge": true,
+      "sharedWith": "Conjoint",
+      "anomaly": null,
+      "appliances": [
+        {
+          "type": "clim",
+          "name": "Climatiseur chambre",
+          "watts": 1100,
+          "quantity": 1,
+          "hoursPerDay": 3,
+          "usage": "soirnuit"
+        },
+        {
+          "type": "ventilo",
+          "name": "Ventilateurs",
+          "watts": 60,
+          "quantity": 2,
+          "hoursPerDay": 8,
+          "usage": "soirnuit"
+        },
+        {
+          "type": "frigo",
+          "name": "Réfrigérateur",
+          "watts": 150,
+          "quantity": 1,
+          "hoursPerDay": 10,
+          "usage": "permanent"
+        },
+        {
+          "type": "tv",
+          "name": "Téléviseur salon",
+          "watts": 100,
+          "quantity": 1,
+          "hoursPerDay": 5,
+          "usage": "soir"
+        },
+        {
+          "type": "lampe",
+          "name": "Éclairage LED",
+          "watts": 10,
+          "quantity": 8,
+          "hoursPerDay": 6,
+          "usage": "soir"
+        },
+        {
+          "type": "box",
+          "name": "Box internet",
+          "watts": 15,
+          "quantity": 1,
+          "hoursPerDay": 24,
+          "usage": "permanent"
+        },
+        {
+          "type": "fer",
+          "name": "Fer à repasser",
+          "watts": 1000,
+          "quantity": 1,
+          "hoursPerDay": 0.5,
+          "usage": "matinsoir"
+        },
+        {
+          "type": "chargeur",
+          "name": "Chargeurs",
+          "watts": 10,
+          "quantity": 3,
+          "hoursPerDay": 6,
+          "usage": "soirnuit"
+        }
+      ],
+      "expectedKwhPerDay": 7.78
+    },
+    {
+      "id": "m2",
+      "ownerId": "u1",
+      "name": "Atelier couture",
+      "number": "0451 3306 4428",
+      "location": "Riviera Palmeraie, Cocody",
+      "type": "Prépayé monophasé",
+      "kind": "workshop",
+      "tariffPerKwh": 80,
+      "usualRechargeKwh": 40,
+      "startKwh": 21,
+      "remoteRecharge": false,
+      "sharedWith": null,
+      "anomaly": null,
+      "appliances": [
+        {
+          "type": "machine",
+          "name": "Machines à coudre",
+          "watts": 100,
+          "quantity": 3,
+          "hoursPerDay": 8,
+          "usage": "atelier"
+        },
+        {
+          "type": "fer",
+          "name": "Fer à repasser pro",
+          "watts": 1200,
+          "quantity": 1,
+          "hoursPerDay": 2,
+          "usage": "atelier"
+        },
+        {
+          "type": "ventilo",
+          "name": "Ventilateurs",
+          "watts": 60,
+          "quantity": 2,
+          "hoursPerDay": 9,
+          "usage": "atelier"
+        },
+        {
+          "type": "lampe",
+          "name": "Éclairage atelier",
+          "watts": 15,
+          "quantity": 6,
+          "hoursPerDay": 6,
+          "usage": "soir"
+        },
+        {
+          "type": "ordi",
+          "name": "Ordinateur caisse",
+          "watts": 60,
+          "quantity": 1,
+          "hoursPerDay": 5,
+          "usage": "journee"
+        }
+      ],
+      "expectedKwhPerDay": 6.72
+    },
+    {
+      "id": "m3",
+      "ownerId": "u2",
+      "name": "Maison Yopougon",
+      "number": "0451 9930 1185",
+      "location": "Yopougon Sicogi, Abidjan",
+      "type": "Prépayé monophasé",
+      "kind": "home",
+      "tariffPerKwh": 73,
+      "usualRechargeKwh": 50,
+      "startKwh": 34,
+      "remoteRecharge": true,
+      "sharedWith": "3 personnes",
+      "anomaly": {
+        "applianceType": "clim",
+        "extraKwhPerHour": 0.6,
+        "fromMinute": 120
+      },
+      "appliances": [
+        {
+          "type": "clim",
+          "name": "Climatiseur salon",
+          "watts": 1200,
+          "quantity": 1,
+          "hoursPerDay": 4,
+          "usage": "soirnuit"
+        },
+        {
+          "type": "congel",
+          "name": "Congélateur",
+          "watts": 200,
+          "quantity": 1,
+          "hoursPerDay": 12,
+          "usage": "permanent"
+        },
+        {
+          "type": "frigo",
+          "name": "Réfrigérateur",
+          "watts": 120,
+          "quantity": 1,
+          "hoursPerDay": 10,
+          "usage": "permanent"
+        },
+        {
+          "type": "tv",
+          "name": "Téléviseur",
+          "watts": 120,
+          "quantity": 1,
+          "hoursPerDay": 6,
+          "usage": "soir"
+        },
+        {
+          "type": "lampe",
+          "name": "Éclairage",
+          "watts": 10,
+          "quantity": 6,
+          "hoursPerDay": 6,
+          "usage": "soir"
+        },
+        {
+          "type": "ventilo",
+          "name": "Ventilateurs",
+          "watts": 60,
+          "quantity": 2,
+          "hoursPerDay": 8,
+          "usage": "soirnuit"
+        },
+        {
+          "type": "box",
+          "name": "Décodeur TV",
+          "watts": 15,
+          "quantity": 1,
+          "hoursPerDay": 24,
+          "usage": "permanent"
+        }
+      ],
+      "expectedKwhPerDay": 10.8
+    },
+    {
+      "id": "m4",
+      "ownerId": "u2",
+      "name": "Atelier soudure",
+      "number": "0451 7712 0583",
+      "location": "Abobo PK18, Abidjan",
+      "type": "Prépayé triphasé",
+      "kind": "workshop",
+      "tariffPerKwh": 80,
+      "usualRechargeKwh": 40,
+      "startKwh": 12.5,
+      "remoteRecharge": false,
+      "sharedWith": null,
+      "anomaly": null,
+      "appliances": [
+        {
+          "type": "soudure",
+          "name": "Poste à souder",
+          "watts": 3000,
+          "quantity": 1,
+          "hoursPerDay": 1.5,
+          "usage": "atelier"
+        },
+        {
+          "type": "outil",
+          "name": "Meuleuse / perceuse",
+          "watts": 800,
+          "quantity": 1,
+          "hoursPerDay": 1,
+          "usage": "atelier"
+        },
+        {
+          "type": "lampe",
+          "name": "Éclairage atelier",
+          "watts": 20,
+          "quantity": 4,
+          "hoursPerDay": 6,
+          "usage": "soir"
+        },
+        {
+          "type": "ventilo",
+          "name": "Ventilateur",
+          "watts": 60,
+          "quantity": 1,
+          "hoursPerDay": 9,
+          "usage": "atelier"
+        }
+      ],
+      "expectedKwhPerDay": 6.32
+    }
+  ],
+  "applianceCatalog": {
+    "clim": {
+      "emoji": "❄️",
+      "label": "Climatiseur",
+      "watts": 1100,
+      "hoursPerDay": 4,
+      "usage": "soirnuit"
+    },
+    "ventilo": {
+      "emoji": "🌀",
+      "label": "Ventilateur",
+      "watts": 60,
+      "hoursPerDay": 8,
+      "usage": "soirnuit"
+    },
+    "frigo": {
+      "emoji": "🧊",
+      "label": "Réfrigérateur",
+      "watts": 150,
+      "hoursPerDay": 10,
+      "usage": "permanent"
+    },
+    "congel": {
+      "emoji": "🥶",
+      "label": "Congélateur",
+      "watts": 200,
+      "hoursPerDay": 12,
+      "usage": "permanent"
+    },
+    "tv": {
+      "emoji": "📺",
+      "label": "Téléviseur",
+      "watts": 100,
+      "hoursPerDay": 5,
+      "usage": "soir"
+    },
+    "lampe": {
+      "emoji": "💡",
+      "label": "Éclairage",
+      "watts": 10,
+      "hoursPerDay": 6,
+      "usage": "soir"
+    },
+    "fer": {
+      "emoji": "👔",
+      "label": "Fer à repasser",
+      "watts": 1000,
+      "hoursPerDay": 0.5,
+      "usage": "matinsoir"
+    },
+    "chauffeeau": {
+      "emoji": "♨️",
+      "label": "Chauffe-eau",
+      "watts": 1500,
+      "hoursPerDay": 1,
+      "usage": "matinsoir"
+    },
+    "cuisson": {
+      "emoji": "🍳",
+      "label": "Plaque / cuiseur",
+      "watts": 800,
+      "hoursPerDay": 1,
+      "usage": "repas"
+    },
+    "box": {
+      "emoji": "📡",
+      "label": "Box / décodeur",
+      "watts": 15,
+      "hoursPerDay": 24,
+      "usage": "permanent"
+    },
+    "chargeur": {
+      "emoji": "🔌",
+      "label": "Chargeurs",
+      "watts": 10,
+      "hoursPerDay": 6,
+      "usage": "soirnuit"
+    },
+    "ordi": {
+      "emoji": "💻",
+      "label": "Ordinateur",
+      "watts": 60,
+      "hoursPerDay": 5,
+      "usage": "journee"
+    },
+    "pompe": {
+      "emoji": "💧",
+      "label": "Pompe à eau",
+      "watts": 750,
+      "hoursPerDay": 1,
+      "usage": "matinsoir"
+    },
+    "machine": {
+      "emoji": "🧵",
+      "label": "Machine à coudre",
+      "watts": 100,
+      "hoursPerDay": 8,
+      "usage": "atelier"
+    },
+    "soudure": {
+      "emoji": "🔥",
+      "label": "Poste à souder",
+      "watts": 3000,
+      "hoursPerDay": 1.5,
+      "usage": "atelier"
+    },
+    "outil": {
+      "emoji": "🛠️",
+      "label": "Outillage électrique",
+      "watts": 800,
+      "hoursPerDay": 1,
+      "usage": "atelier"
+    },
+    "autre": {
+      "emoji": "🔋",
+      "label": "Autre appareil",
+      "watts": 100,
+      "hoursPerDay": 2,
+      "usage": "journee"
+    }
+  },
+  "usageWindows": {
+    "permanent": {
+      "label": "Permanent (24 h / 24)",
+      "hourlyWeights": [
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        1.15,
+        1.15,
+        1.15,
+        1.15,
+        1.15,
+        1.15,
+        1.15,
+        1.15,
+        1.15,
+        1.15,
+        1.15,
+        0.9
+      ]
+    },
+    "soir": {
+      "label": "Le soir (18 h – 23 h)",
+      "hourlyWeights": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.4,
+        0.3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        3,
+        3,
+        2,
+        1
+      ]
+    },
+    "soirnuit": {
+      "label": "Soir et nuit (18 h – 2 h)",
+      "hourlyWeights": [
+        1,
+        0.7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.5,
+        0.5,
+        0,
+        0,
+        0,
+        1.6,
+        2.6,
+        3,
+        3,
+        2.6,
+        1.6
+      ]
+    },
+    "journee": {
+      "label": "En journée (8 h – 18 h)",
+      "hourlyWeights": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0.6,
+        0.6,
+        0.6,
+        0,
+        0,
+        0
+      ]
+    },
+    "atelier": {
+      "label": "Atelier (9 h – 22 h, pic le soir)",
+      "hourlyWeights": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1.7,
+        2,
+        2,
+        1.6,
+        0,
+        0
+      ]
+    },
+    "matinsoir": {
+      "label": "Matin et soir",
+      "hourlyWeights": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1.2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1.4,
+        1.2,
+        0,
+        0,
+        0
+      ]
+    },
+    "repas": {
+      "label": "Aux heures des repas",
+      "hourlyWeights": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1.4,
+        0.6,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1.6,
+        0.8,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "tipRules": {
+    "clim": {
+      "savingRatio": 0.25,
+      "title": "Réglez la climatisation à 26 °C au lieu de 22 °C",
+      "detail": "Chaque degré en moins coûte environ 6 % de consommation."
+    },
+    "ventilo": {
+      "savingRatio": 0.2,
+      "title": "Arrêtez les ventilateurs dans les pièces vides",
+      "detail": "Un ventilateur oublié la nuit consomme pour rien."
+    },
+    "frigo": {
+      "savingRatio": 0.15,
+      "title": "Dégivrez le réfrigérateur et vérifiez le joint",
+      "detail": "Le givre isole : le moteur tourne plus longtemps."
+    },
+    "congel": {
+      "savingRatio": 0.18,
+      "title": "Dégivrez le congélateur (givre de plus de 5 mm)",
+      "detail": "Gardez-le plein et loin d’une source de chaleur."
+    },
+    "tv": {
+      "savingRatio": 0.15,
+      "title": "Éteignez la télévision au lieu de la laisser en veille",
+      "detail": "La veille consomme toute la nuit."
+    },
+    "box": {
+      "savingRatio": 0.4,
+      "title": "Débranchez box et décodeur la nuit",
+      "detail": "Ils consomment 24 h / 24, même sans utilisation."
+    },
+    "chargeur": {
+      "savingRatio": 0.5,
+      "title": "Débranchez les chargeurs une fois la charge finie",
+      "detail": "Petits mais nombreux, ils s’additionnent."
+    },
+    "lampe": {
+      "savingRatio": 0.3,
+      "title": "Éteignez les pièces inoccupées, passez au LED",
+      "detail": "L’éclairage pèse surtout entre 18 h et 22 h."
+    },
+    "fer": {
+      "savingRatio": 0.2,
+      "title": "Repassez en une seule fois, en dehors de 18 h – 22 h",
+      "detail": "Le fer chauffe fort à chaque remise en route."
+    },
+    "chauffeeau": {
+      "savingRatio": 0.3,
+      "title": "Coupez le chauffe-eau au disjoncteur la journée",
+      "detail": "Il maintient l’eau chaude même sans usage."
+    },
+    "cuisson": {
+      "savingRatio": 0.1,
+      "title": "Couvrez les casseroles et coupez la plaque 5 min avant",
+      "detail": "La chaleur résiduelle termine la cuisson."
+    },
+    "pompe": {
+      "savingRatio": 0.15,
+      "title": "Programmez la pompe aux heures creuses",
+      "detail": "Remplir la cuve le matin évite le pic du soir."
+    },
+    "ordi": {
+      "savingRatio": 0.2,
+      "title": "Mettez l’ordinateur en veille pendant les pauses",
+      "detail": "Écran éteint = moitié de consommation en moins."
+    },
+    "machine": {
+      "savingRatio": 0.15,
+      "title": "Coupez les machines pendant les pauses",
+      "detail": "Les moteurs à vide consomment encore."
+    },
+    "soudure": {
+      "savingRatio": 0.12,
+      "title": "Évitez de souder entre 18 h et 22 h, coupez le poste à l’arrêt",
+      "detail": "Le poste reste sous tension entre deux soudures."
+    },
+    "outil": {
+      "savingRatio": 0.15,
+      "title": "Débranchez l’outillage après usage",
+      "detail": "Compresseur et meuleuse en attente consomment."
+    },
+    "autre": {
+      "savingRatio": 0.1,
+      "title": "Débranchez cet appareil quand il ne sert pas",
+      "detail": "Mode veille = consommation invisible."
+    }
+  },
+  "communes": [
+    "Abobo",
+    "Adjamé",
+    "Anyama",
+    "Attécoubé",
+    "Bingerville",
+    "Cocody",
+    "Koumassi",
+    "Marcory",
+    "Plateau",
+    "Port-Bouët",
+    "Songon",
+    "Treichville",
+    "Yopougon",
+    "Bouaké",
+    "Daloa",
+    "Grand-Bassam",
+    "Korhogo",
+    "San-Pédro",
+    "Yamoussoukro"
+  ],
+  "recharges": [
+    {
+      "id": "r1",
+      "meterId": "m1",
+      "meterName": "Maison Cocody",
+      "date": "2026-10-06T18:42:00",
+      "amount": 2190,
+      "kwh": 30,
+      "status": "success",
+      "method": "Wave"
+    },
+    {
+      "id": "r2",
+      "meterId": "m1",
+      "meterName": "Maison Cocody",
+      "date": "2026-09-25T20:15:00",
+      "amount": 5000,
+      "kwh": 68.5,
+      "status": "success",
+      "method": "Orange Money"
+    },
+    {
+      "id": "r3",
+      "meterId": "m1",
+      "meterName": "Maison Cocody",
+      "date": "2026-09-18T09:40:00",
+      "amount": 2000,
+      "kwh": null,
+      "status": "refunded",
+      "method": "Wave",
+      "note": "Remboursé le 19/09 · réclamation A-2291 clôturée"
+    },
+    {
+      "id": "r4",
+      "meterId": "m2",
+      "meterName": "Atelier couture",
+      "date": "2026-10-05T08:10:00",
+      "amount": 3200,
+      "kwh": 40,
+      "status": "success",
+      "method": "Orange Money"
+    },
+    {
+      "id": "r5",
+      "meterId": "m2",
+      "meterName": "Atelier couture",
+      "date": "2026-09-27T17:30:00",
+      "amount": 4000,
+      "kwh": 50,
+      "status": "success",
+      "method": "MTN MoMo"
+    },
+    {
+      "id": "r6",
+      "meterId": "m3",
+      "meterName": "Maison Yopougon",
+      "date": "2026-10-07T19:05:00",
+      "amount": 5000,
+      "kwh": 68.5,
+      "status": "success",
+      "method": "Wave"
+    },
+    {
+      "id": "r7",
+      "meterId": "m3",
+      "meterName": "Maison Yopougon",
+      "date": "2026-09-29T12:20:00",
+      "amount": 3000,
+      "kwh": 41.1,
+      "status": "success",
+      "method": "Orange Money"
+    },
+    {
+      "id": "r8",
+      "meterId": "m4",
+      "meterName": "Atelier soudure",
+      "date": "2026-10-08T16:02:00",
+      "amount": 2000,
+      "kwh": 25,
+      "status": "pending",
+      "method": "Moov Money",
+      "note": "En attente de l'accusé du compteur"
+    },
+    {
+      "id": "r9",
+      "meterId": "m4",
+      "meterName": "Atelier soudure",
+      "date": "2026-10-03T10:45:00",
+      "amount": 4000,
+      "kwh": 50,
+      "status": "success",
+      "method": "Orange Money"
+    }
+  ],
+  "pastAlerts": [
+    {
+      "id": "p1",
+      "meterId": "m1",
+      "type": "rechargeConfirmed",
+      "title": "Recharge confirmée",
+      "detail": "+30 kWh",
+      "date": "2026-10-06T18:42:00"
+    },
+    {
+      "id": "p2",
+      "meterId": "m1",
+      "type": "lowCredit",
+      "title": "Crédit faible",
+      "detail": "≈ 1 j 2 h restants",
+      "date": "2026-10-05T19:15:00",
+      "resolved": true
+    },
+    {
+      "id": "p3",
+      "meterId": "m2",
+      "type": "rechargeConfirmed",
+      "title": "Recharge confirmée",
+      "detail": "+40 kWh",
+      "date": "2026-10-05T08:10:00"
+    },
+    {
+      "id": "p4",
+      "meterId": "m1",
+      "type": "tip",
+      "title": "Votre pic est entre 18 h et 22 h",
+      "detail": "climatiseur et éclairage",
+      "date": "2026-09-30T10:00:00"
+    },
+    {
+      "id": "p5",
+      "meterId": "m3",
+      "type": "rechargeConfirmed",
+      "title": "Recharge confirmée",
+      "detail": "+68,5 kWh",
+      "date": "2026-10-07T19:05:00"
+    },
+    {
+      "id": "p6",
+      "meterId": "m4",
+      "type": "imminentCutoff",
+      "title": "Coupure imminente",
+      "detail": "Coupure prévue dans ≈ 3 h",
+      "date": "2026-10-03T07:50:00",
+      "resolved": true
+    },
+    {
+      "id": "p7",
+      "meterId": "m4",
+      "type": "rechargeConfirmed",
+      "title": "Recharge confirmée",
+      "detail": "+50 kWh",
+      "date": "2026-10-03T10:45:00"
+    },
+    {
+      "id": "p8",
+      "meterId": "m3",
+      "type": "tip",
+      "title": "Congélateur : pensez à dégivrer",
+      "detail": "givre > 5 mm",
+      "date": "2026-09-28T09:00:00"
+    }
+  ],
+  "demoOtp": "123456",
+  "rules": {
+    "riskThresholdsHours": {
+      "low": ">= 48",
+      "medium": "24 – 48",
+      "high": "< 24"
+    },
+    "anomalyDetection": "écart cumulé >= 0,8 kWh ET >= 15 % de la consommation prévue",
+    "overconsumptionAdvice": "consommation depuis minuit > prévu de 10 % et > 0,4 kWh, et écart qui se poursuit sur les 2 dernières heures",
+    "marginHours": 6
+  }
+}

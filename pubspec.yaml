@@ -1,0 +1,68 @@
+# pubspec.yaml complet d'O'KOURAN (remplace celui du projet).
+# Changements : google_fonts retiré (polices embarquées), assets logo/icônes/données,
+# section fonts. Garder les mêmes versions que votre projet si elles diffèrent.
+name: okouran
+description: "O'KOURAN : suivi du crédit des compteurs prépayés (maquette frontend)."
+publish_to: 'none'
+version: 1.0.0+2
+
+environment:
+  sdk: '>=3.6.0 <4.0.0' # Flutter 3.27 minimum (withValues, CardThemeData)
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  go_router: ^18.0.2
+  flutter_riverpod: ^3.4.3
+  fl_chart: ^1.2.0
+  intl: ^0.20.3
+  google_fonts: ^9.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  # Optionnel : icône d'application et écran de lancement natif.
+  # Décommenter puis voir flutter_launcher_icons.yaml / flutter_native_splash.yaml
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.8
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/logo/          # Flutter choisit seul 2.0x/ ou 3.0x/ selon l'écran
+    - assets/logo/svg/      # SVG (si vous ajoutez flutter_svg)
+    - assets/icons/
+    - assets/data/
+
+  fonts:
+    - family: Jost            # AppFonts.brand : nom de marque, titres, gros chiffres
+      fonts:
+        - asset: assets/fonts/Jost-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Jost-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Jost-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Jost-Bold.ttf
+          weight: 700
+    - family: Inter           # AppFonts.text : texte courant (très lisible)
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
+    - family: JetBrainsMono   # AppFonts.mono : numéros de compteur, codes
+      fonts:
+        - asset: assets/fonts/JetBrainsMono-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/JetBrainsMono-SemiBold.ttf
+          weight: 600
